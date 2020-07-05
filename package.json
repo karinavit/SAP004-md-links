@@ -1,4 +1,26 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "## Índice",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karinavit/SAP004-md-links.git"
+  },
+  "keywords": [
+    "mdlinks",
+    "SAP004"
+  ],
+  "author": "Karina Vitangelo <ka.vitangelo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karinavit/SAP004-md-links/issues"
+  },
+  "homepage": "https://github.com/karinavit/SAP004-md-links#readme"
 }
