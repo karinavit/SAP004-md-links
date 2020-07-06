@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/karinavit/SAP004-md-links/issues"
   },
-  "homepage": "https://github.com/karinavit/SAP004-md-links#readme"
+  "homepage": "https://github.com/karinavit/SAP004-md-links#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
 }
