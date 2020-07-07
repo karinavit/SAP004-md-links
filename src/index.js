@@ -2,27 +2,46 @@ const fs = require("fs");
 
 
 function mdLinksFile(file) {
-  let myArr = [];
-  return new Promise((resolve, reject) => {
+   return new Promise((resolve, reject) => {
     fs.readFile(file, "utf8", (err, data) => {
       if (err) {
         reject(err.message);
       } else {
         const myRegex = /\[([^\[\]]+)\]\((https?:\/\/[^\)]*)\)/gm;
-        const links = data.match(myRegex);
-        links.forEach((element) => {
+        const listlinks = data.match(myRegex);
+        const listComplete = listlinks.map((element) => {
            text = element.match(/\[([^\[\]]+)\]/)[1];
            href = element.match(/\((https?:\/\/[^\)]*)\)/)[1];
-          myArr.push({text,href,file});
+          return ({text,href,file});
           })
-        resolve(myArr);
-        console.log(myArr)
+        resolve(listComplete);
+        //console.log()
         
       }
+
     }); 
   });
 }
-mdLinksFile(process.argv[2]);
+  mdLinksFile(process.argv[2])
+  .then((listComplete)=> {
+    console.log(listComplete)
+    return 'abacaxi';
+  })
+  .then((banana) => {
+    console.log(banana)
+
+  })
+
+
+
+//function statsFile(){
+
+ // const alllinks = mdLinksFile.map((i) => i.href);
+ // let myArr = []; let myArr = []; const uniqueLinks = 
+//}
+
+
+
 //console.log(process.argv[1]);
 
 //module.exports = mdLinksFile
