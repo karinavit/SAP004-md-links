@@ -2,7 +2,10 @@
   "name": "md-links",
   "version": "0.1.0",
   "description": "## Índice",
-  "main": "src/index.js",
+  "main": "index.js",
+  "bin": {
+    "md-links": "./cli.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -25,5 +28,6 @@
   "homepage": "https://github.com/karinavit/SAP004-md-links#readme",
   "dependencies": {
     "fs": "0.0.1-security"
-  }
+  },
+  "devDependencies": {}
 }
