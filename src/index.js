@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+//const myPath = require ()
 
 function mdLinksFile(file) {
    return new Promise((resolve, reject) => {
@@ -23,14 +23,25 @@ function mdLinksFile(file) {
   });
 }
   mdLinksFile(process.argv[2])
-  .then((listComplete)=> {
-    console.log(listComplete)
-    return 'abacaxi';
-  })
-  .then((banana) => {
-    console.log(banana)
+    .then((listComplete)=> {
+      const allLinks = listComplete.map((i) => i.href);
+      const mySet = new Set(allLinks);
+      //console.log(allLinks)
+      console.log ('Único: ' + mySet.size + ' Todos: ' + allLinks.length);
+      
+    }) 
+    
 
-  })
+
+
+/* 
+    console.log(listComplete)
+    return 'abacaxi'; */
+  
+  /* .then(() => {
+    console.log('banana') */
+
+  
 
 
 
