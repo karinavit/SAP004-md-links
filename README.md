@@ -6,9 +6,7 @@
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Instalação do Projeto](#3-instalação-do-projeto)
 * [4. Implementações Futuras](#4-Implementações-Futuras)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Checklist](#9-checklist)
-* [6. Autores](#6-Autores)
+* [5. Autora](#6-Autora)
 
 ***
 
@@ -29,7 +27,6 @@ Uma comunidade open source nos propôs criar uma ferramenta, usando
 `Markdown`, para verificar os arquivos que contenham links e mostrar algumas
 estatísticas.
 
-![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
 
 ## 2. Resumo do projeto
 
@@ -38,108 +35,39 @@ A proposta é construir um programa que seja executado com [Node.js](https://nod
 
 ## 3. Instalação do projeto
 
-Pode-se instalar o módulo via `npm install <karinavit>/md-links`
+Atualmente, essa biblioteca apenas identifica os links presentes no documento Markdown. Portanto a instalação deve ser realizada da seguinte forma:
 
-### CLI (Command Line Interface - Interface de Linha de Comando)
+Caso deseje baixar o projeto para sua máquina é possível criar um fork do nosso repositório e depois disso, você deve realizar um "clone" ou "donwload" do **link fornecido pelo seu repositório** para então digitar em seu terminal:
 
-O executável da nossa aplicação deve poder ser executado da seguinte maneira,
-através do terminal:
+  `git clone <cole seu link após isso>`
+  
+O repositório será completamente baixado em sua máquina, e caso use o Visual Studio Code, basta entrar na pasta pelo terminal e digitar:
 
-`md-links <path-to-file> [options]`
+  `code .`
 
-Por exemplo:
+Caso não possua o Node.js instalado, basta clicar nesse link [aqui](https://nodejs.org/pt-br/download/) e fazer o download, pois, para executar ele em seu computador, será necessário realizar a instalação da pasta node modules, com o uso do NPM (nativo do Node.js).
 
-```sh
-$ md-links ./some/example.md
-./some/example.md http://algo.com/2/3/ Link de algo
-./some/example.md https://outra-coisa-.net/algum-doc.html algum doc
-./some/example.md http://google.com/ Google
-```
+Assim que a instalação tiver sido concluída, basta digitar em seu terminal:
 
-O comportamento padrão não deve validar se as URLs respondem ok ou não, somente
-deve identificar o arquivo Markdown (a partir da rota que recebeu como
-argumento), analisar o arquivo Markdown e imprimir os links que vão sendo
-encontrados, junto com a rota do arquivo onde aparece e o texto encontrado
-dentro do link (limitado a 50 caracteres).
+`npm install` 
 
+E aguardar até que o processo tenha sido completo.
 
-***
+A partir daí basta abrir no seu terminal e indicar o arquivo que deve ser passado na 
 
 ## 4. Implementações Futuras
 
-Para versões futuras deseja-se implementar as options descritas abaixo:
-#### Options
-
-##### `--validate`
-
-Se passamos a opção `--validate`, o módulo deve fazer uma requisição HTTP para
-verificar se o link funciona ou não. Se o link resultar em um redirecionamento a
-uma URL que responde ok, então consideraremos o link como ok.
-
-Por exemplo:
-
-```sh
-$ md-links ./some/example.md --validate
-./some/example.md http://algo.com/2/3/ ok 200 Link de algo
-./some/example.md https://outra-coisa-.net/algum-doc.html fail 404 algum doc
-./some/example.md http://google.com/ ok 301 Google
-```
-
-Vemos que o _output_ neste caso inclui a palavra `ok` e `fail` depois da URL,
-assim como o status da resposta recebida à requisição HTTP feita pela URL.
-
-##### `--stats`
-
-Se passamos a opção `--stats` o output (saída) será um texto com estatísticas
-básicas sobre os links.
-
-```sh
-$ md-links ./some/example.md --stats
-Total: 3
-Unique: 3
-```
-
-Também podemos combinar `--stats` e `--validate` para obter estatísticas que
-necessitem dos resultados da validação.
-
-```sh
-$ md-links ./some/example.md --stats --validate
-Total: 3
-Unique: 3
-Broken: 1
-```
-
-## 5. Checklist
-
-### General
-
+Para versões futuras deseja-se implementar as options descritas no check list abaixo:
 * [ ] Poder instalar via `npm install --global <github-user>/md-links`
-
-### `README.md`
-
-* [ ] Um board com o backlog das implementações da sua biblioteca
-* [ ] Documentação técnica da sua biblioteca
-* [ ] Guia de uso e instalação da biblioteca
-
-### API `mdLinks(path, opts)`
-
-* [ ] O módulo exporta uma função com a interface (API) esperada
-* [ ] Implementa suporte para arquivo individual
 * [ ] Implementa suporte para diretórios
 * [ ] Implementa `options.validate`
-
-### CLI
-
 * [ ] Possuir o executável `md-links` no path (configurado no `package.json`)
 * [ ] Executar sem erros e ter o resultado esperado
 * [ ] Implementar `--validate`
 * [ ] Implementar `--stats`
-
-### Testes
-
 * [ ] Os testes unitários devem cobrir no mínimo 70% dos statements, functions,
   lines e branches.
 * [ ] Rodar os testes e linter (`npm test`).
 
-## 6. Autora
+## 5. Autora
 Este projeto foi desenvolvido por [Karina Vitangelo](https://github.com/karinavit), aluna da 4a Geração da [Laboratoria](https://github.com/Laboratoria)(SAP004).
