@@ -37,7 +37,7 @@ A proposta é construir um programa que seja executado com [Node.js](https://nod
 
 Atualmente, essa biblioteca apenas identifica os links presentes no documento Markdown. Portanto a instalação deve ser realizada da seguinte forma:
 
-Caso deseje baixar o projeto para sua máquina é possível criar um fork do nosso repositório e depois disso, você deve realizar um "clone" ou "donwload" do **link fornecido pelo seu repositório** para então digitar em seu terminal:
+Caso deseje baixar o projeto para sua máquina é possível criar um fork deste repositório e depois disso, você deve realizar um "clone" ou "donwload" do **link fornecido pelo seu repositório** para então digitar em seu terminal:
 
   `git clone <cole seu link após isso>`
   
