@@ -6,7 +6,7 @@
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Instalação do Projeto](#3-instalação-do-projeto)
 * [4. Implementações Futuras](#4-Implementações-Futuras)
-* [5. Autora](#6-Autora)
+* [5. Autora](#5-Autora)
 
 ***
 
@@ -64,6 +64,7 @@ $ md-links ./some/example.md
 ./some/example.md http://algo.com/2/3/ Link de algo
 ./some/example.md https://outra-coisa-.net/algum-doc.html algum doc
 ./some/example.md http://google.com/ Google
+```
 
 ## 4. Implementações Futuras
 
