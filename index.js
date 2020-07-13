@@ -1,4 +1,3 @@
-console.log("Oi"); 
 const fs = require("fs");
 //const myPath = require ()
 
@@ -32,40 +31,9 @@ function mdLinksFile(file) {
       console.log ('Único: ' + mySet.size + ' Todos: ' + allLinks.length);
       
     }) 
-    
-
+   
   //module.exports = mdLinksFile;
-
-/* 
-    console.log(listComplete)
-    return 'abacaxi'; */
-  
-  /* .then(() => {
-    console.log('banana') */
-
-  
-
-
-
-//function statsFile(){
-
- // const alllinks = mdLinksFile.map((i) => i.href);
- // let myArr = []; let myArr = []; const uniqueLinks = 
 //}
 
 
 
-//console.log(process.argv[1]);
-
-
-//Estão funcionando para teste
-/* const linguagens = require('./testando.json')
-module.exports = { 
-all: linguagens
-} */
-
-//Padrão da Laboratória
-/* module.exports = () => {
-  // ...
-};
- */
